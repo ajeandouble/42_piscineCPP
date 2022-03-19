@@ -26,26 +26,6 @@ class Bureaucrat
 
 };
 
-class Bureaucrat::GradeTooLowException : public std::exception
-{
-	public:
-		GradeTooLowException();
-		virtual ~GradeTooLowException() throw();
-		GradeTooLowException(GradeTooLowException const &src);
-		GradeTooLowException &operator=(GradeTooLowException const &src);
-		virtual const char* what() const throw();
-};
-
-class Bureaucrat::GradeTooHighException : public std::exception
-{
-	public:
-		GradeTooHighException();
-		virtual ~GradeTooHighException() throw();
-		GradeTooHighException(GradeTooHighException const &src);
-		GradeTooHighException &operator=(GradeTooHighException const &src);
-		virtual const char* what() const throw();		
-};
-
 std::ostream &operator<<(std::ostream &os, Bureaucrat const &b);
 
 # endif

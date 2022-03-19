@@ -1,14 +1,14 @@
+#include <iostream>
 #include <exception>
 #include "Bureaucrat.hpp"
-
-#include <iostream>
+#include "Exceptions.hpp"
 
 Bureaucrat::Bureaucrat(std::string name, unsigned int grade)
 {
 	if (grade > 150)
-		throw Bureaucrat::GradeTooHighException();
+		throw	GradeTooHighException();
 	else if (grade < 1)
-		throw Bureaucrat::GradeTooLowException();
+		throw	GradeTooLowException();
 	this->_name = name;
 	this->_grade = grade;
 }
