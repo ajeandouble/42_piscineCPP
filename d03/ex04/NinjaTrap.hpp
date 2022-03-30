@@ -7,11 +7,13 @@
 
 #include <string>
 
-class NinjaTrap : protected ClapTrap
+class NinjaTrap : virtual protected ClapTrap
 {
 	public:
 		NinjaTrap(std::string name);
 		~NinjaTrap();
+		void    rangedAttack(std::string const &target);
+		void    meleeAttack(std::string const &target);
 		void ninjaShoeBox(FragTrap &trap);
 		void ninjaShoeBox(ScavTrap &trap);
 		void ninjaShoeBox(NinjaTrap &trap);

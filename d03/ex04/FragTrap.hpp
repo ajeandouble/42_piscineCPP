@@ -4,7 +4,7 @@
 #include "ClapTrap.hpp"
 #include <string>
 
-class FragTrap : public ClapTrap
+class FragTrap : virtual public ClapTrap
 {
 	private:
 		void    _funny1(std::string const &target);
